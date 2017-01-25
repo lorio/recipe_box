@@ -16,5 +16,5 @@ gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'cocoon', '~> 1.2.6'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
-
+gem 'pry',   group: :development
 

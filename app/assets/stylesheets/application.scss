@@ -119,5 +119,24 @@ body {
 	margin-bottom: 50px;
 	ul, ol {
 		padding-left: 18px;
+		li {
+			padding: 1em 0;
+			border-bottom: 1px solid #EAEAEA;
+		}
 	}
+}
+.form-inline {
+	margin-top: 15px;
+}
+.form-input {
+	width: 65% !important;
+	float: left;
+}
+.form-button {
+	float: left;
+	width: 30% !important;
+	margin-left: 4%;
+}
+.add-button {
+	margin-top: 25%;
 }

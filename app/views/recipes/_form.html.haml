@@ -5,7 +5,7 @@
 				= @recipe.errors.count
 				Prevented this recipe from saving
 			%ul
-				- @recipe.errors.full_messsage.each do |msg|
+				- @recipe.errors.full_messages.each do |msg|
 					%li= msg
 	.panel-body
 		= f.input :title, input_html: { class: 'form-control' }
@@ -17,7 +17,7 @@
 				%h3 Ingredients
 				#ingredients
 					= f.simple_fields_for :ingredients do |ingredient|
-						= render 'ingredients_fields', f: ingredient
+						= render 'ingredient_fields', f: ingredient
 					.links
 						= link_to_add_association 'Add Ingredient', f, :ingredients, class: "btn btn-default add-button" 
 			.col-md-6
