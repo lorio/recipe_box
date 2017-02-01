@@ -17,11 +17,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-@mixin box-shadow {
-	-webkit-box-shadow: rgba(0, 0, 0, 0.9) 0 2px 0;
-	-moz-box-shadow: rgba(0, 0, 0, 0.9) 0 2px 0;
-	box-shadow: rgba(0, 0, 0, 0.9) 0 2px 0;
-}
+$shadow: 10px 10px 5px 0px rgba(0,0,0,0.05);
+
 
 $red: #DB6161;
 
@@ -38,14 +35,14 @@ body {
 	margin-bottom: 20px;
 	border: 1px solid transparent;
 	border-radius: 5px;
-	@include box-shadow;
+	//box-shadow: $shadow;
 	background: white;
 	font-weight: bold;
 }
 
 .navbar {
 	margin-bottom: 50px;
-	@include box-shadow;
+	box-shadow: $shadow;
 	border: none;
 	.navbar-brand {
 		text-transform: uppercase;
@@ -62,11 +59,12 @@ body {
 	background: white;
 	border-radius: 5px;
 	margin-bottom: 40px;
-	@include box-shadow;
+	box-shadow: $shadow;
 	.image-wrapper {
 		max-width: 100%;
 		border-radius: 5px 5px 0 0;
 		overflow: hidden;
+
 	}
 	img {
 		width: 100%;
@@ -91,7 +89,7 @@ body {
 
 #recipe_info, #ingredients, #directions {
 	background: white;
-	@include box-shadow;
+	box-shadow: $shadow;
 	min-height: 360px;
 	border-radius: 5px;
 	padding: 2em 8%;
@@ -100,10 +98,13 @@ body {
 .recipe_image {
 	max-width: 100%;
 	border-radius: 5px;
-	@include box-shadow;
+	box-shadow: $shadow;
+//	vertical-align: baseline;
+	//margin-bottom: 8px;
 }
 
 #recipe_info {
+
 	h1 {
 		font-size: 36px;
 		font-weight: normal;
@@ -116,7 +117,7 @@ body {
 }
 
 #ingredients, #directions {
-	margin-bottom: 50px;
+	margin: 10px 0 50px;
 	ul, ol {
 		padding-left: 18px;
 		li {

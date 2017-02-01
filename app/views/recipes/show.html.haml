@@ -1,11 +1,13 @@
 .main_content
-	#recipe_top.row
-		.col-md-4
-			= image_tag @recipe.image.url(:medium, class: "recipe_image")
-		.col-md-8
-			#recipe_info
-				%h1= @recipe.title
-				%p.description= @recipe.description
+	#recipe_top
+		.row
+			.col-md-4
+				.recipe.image-wrapper
+					= image_tag @recipe.image.url(:medium, class: "recipe_image")
+			.col-md-8
+				#recipe_info
+					%h1= @recipe.title
+					%p.description= @recipe.description
 	.row
 		.col-md-6
 			#ingredients
@@ -15,7 +17,7 @@
 						%li= ingredient.name
 		.col-md-6
 			#directions
-				%h2 Description
+				%h2 Directions
 				%ul
 					- @recipe.directions.each do |direction|
 						%li= direction.step
