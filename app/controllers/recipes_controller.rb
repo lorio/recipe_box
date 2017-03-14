@@ -61,8 +61,8 @@ class RecipesController < ApplicationController
 
 	def correct_user
 		@recipe = current_user.recipes.find_by(id: params[:id])
-#			if @recipe.nil
+#			if @recipe.nil?
 #				redirect_to_root_path, notice: "Not authorized"
-	#		end
+#			end
 	end
 end
