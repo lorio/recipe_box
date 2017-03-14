@@ -47,7 +47,6 @@ class RecipesController < ApplicationController
 		params.require(:recipe)
 			.permit(
 				:title,
-				:username,
 				:description,
 				:image,
 				ingredients_attributes: [:id, :name, :_destroy],
