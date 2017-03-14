@@ -45,12 +45,16 @@ body {
 	box-shadow: $shadow;
 	border: none;
 	.navbar-brand {
-		text-transform: uppercase;
-		letter-spacing: -1px;
+		font-family: 'Bitter', serif;
+	  letter-spacing: .01em;
 		font-weight: bold;
 		font-size: 25px;
 		a {
 			color: $red;
+			&:hover { 
+				color: lighten( $red, 15% );
+				text-decoration: none;
+				 }
 		}
 	}
 }
@@ -64,7 +68,6 @@ body {
 		max-width: 100%;
 		border-radius: 5px 5px 0 0;
 		overflow: hidden;
-
 	}
 	img {
 		width: 100%;
@@ -75,6 +78,7 @@ body {
 			transform: scale(1.075);
 		}
 	}
+
 	h2 {
 		padding: 15px 5%;
 		margin: 0;
@@ -106,6 +110,7 @@ body {
 #recipe_info {
 
 	h1 {
+		font-family: 'Bitter', serif;
 		font-size: 36px;
 		font-weight: normal;
 		color: $red;
@@ -118,6 +123,7 @@ body {
 
 #ingredients, #directions {
 	margin: 10px 0 50px;
+	h2 { font-family: 'Bitter', serif; }
 	ul, ol {
 		padding-left: 18px;
 		li {
@@ -142,5 +148,7 @@ body {
 	margin-top: 25%;
 }
 h3.author {
+	font-family: 'Bitter', serif;
 	font-style: italic;
 }
+.recipe {}
