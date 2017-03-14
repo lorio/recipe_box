@@ -7,7 +7,7 @@
 			.col-md-8
 				#recipe_info
 					%h1= @recipe.title
-					- if @recipe.user.username
+					- if @recipe.user
 						%h3.author 
 							= precede "by" do
 								%span
